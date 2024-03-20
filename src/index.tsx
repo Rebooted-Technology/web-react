@@ -4,6 +4,8 @@ import './index.css';
 import App from './app/App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "@material-tailwind/react";
+import { Provider } from 'react-redux';
+import { store } from './lib/store';
 
 
 const root = ReactDOM.createRoot(
@@ -11,9 +13,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>
 );
 
