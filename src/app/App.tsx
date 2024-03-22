@@ -2,6 +2,7 @@ import React from 'react';
 import { useAppSelector } from '../lib/redux/hooks';
 import { selectServerAvailable, selectServerLoading } from '../lib/api/rebootedSlice';
 import { useGetHealthCheckQuery } from '../lib/api/rebootedApi';
+import LoadingPage from './LoadingPage';
 
 function App() {
   const serverLoading = useAppSelector(selectServerLoading)
@@ -11,11 +12,7 @@ function App() {
 
   if (serverLoading) {
     return (
-      <>
-        <h1 className="text-3xl font-bold underline">
-          Server Loading
-        </h1>
-      </>
+      <LoadingPage />
     )
   }
 
