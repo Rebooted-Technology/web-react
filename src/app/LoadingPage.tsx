@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 const LoadingPage = () => {
   const [elapsedTime, setElapsedTime] = useState(0);
-  const [isRunning, setIsRunning] = useState(true);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
