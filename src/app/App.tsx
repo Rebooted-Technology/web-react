@@ -3,6 +3,7 @@ import { useAppSelector } from '../lib/redux/hooks';
 import { selectServerAvailable, selectServerLoading } from '../lib/api/rebootedSlice';
 import { useGetHealthCheckQuery } from '../lib/api/rebootedApi';
 import LoadingPage from './LoadingPage';
+import Dashboard from './layouts/Dashboard';
 
 function App() {
   const serverLoading = useAppSelector(selectServerLoading)
@@ -19,9 +20,7 @@ function App() {
   return (
     <>
       {serverAvailable ? (
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
+        <Dashboard />
       ) : (
         <h1 className="text-3xl font-bold underline">
           Offline
