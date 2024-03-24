@@ -18,7 +18,7 @@ function Dashboard() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (menuState != DashboardMenuState.Sidebar && !isWindowMedium(window)) {
+      if (menuState !== DashboardMenuState.Sidebar && !isWindowMedium(window)) {
         setMenuState(DashboardMenuState.Sidebar);
       } else if (
         menuState === DashboardMenuState.Sidebar &&
