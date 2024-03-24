@@ -1,9 +1,10 @@
 import React from "react"
-import { useAppSelector } from "../lib/redux/hooks"
-import { selectServerAvailable, selectServerLoading } from "../lib/api/rebootedSlice"
-import { useGetHealthCheckQuery } from "../lib/api/rebootedApi"
+
+import { useGetHealthCheckQuery } from "./api/rebootedApi"
 import LoadingPage from "./LoadingPage"
 import Dashboard from "./layouts/Dashboard"
+import { useAppSelector } from "./redux/hooks"
+import { selectServerAvailable, selectServerLoading } from "./api/rebootedSlice"
 
 function App() {
 	const serverLoading = useAppSelector(selectServerLoading)
