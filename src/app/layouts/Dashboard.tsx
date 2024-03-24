@@ -28,7 +28,10 @@ function Dashboard() {
 
 	return (
 		<div className="min-h-screen">
-			<Navbar menuState={menuState} updateMenuState={setMenuState} />
+			<Navbar
+				menuState={menuState}
+				updateMenuState={setMenuState}
+			/>
 			<Sidebar menuState={menuState} />
 			<div
 				className={`inset-0 flex-1 md:ml-64 mt-16 overflow-y-auto transition-all duration-300`}
