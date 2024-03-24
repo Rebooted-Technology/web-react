@@ -21,7 +21,7 @@ const LoadingPage = () => {
 
   return (
     <div className="bg-gray-100">
-      {elapsedTime >= 1000 ? (
+      {elapsedTime >= 1000 ?
         <div className="h-screen w-screen flex flex-col items-center justify-center px-4 pb-8 md:px-8 md:pb-12">
           <div className="flex flex-col items-center space-y-4">
             <h2 className="text-2xl font-semibold text-blue-500">
@@ -75,9 +75,7 @@ const LoadingPage = () => {
             </span>
           </div>
         </div>
-      ) : (
-        <></>
-      )}
+      : <></>}
     </div>
   );
 };

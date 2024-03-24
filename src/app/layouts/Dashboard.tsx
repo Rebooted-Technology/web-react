@@ -11,9 +11,9 @@ export enum DashboardMenuState {
 
 function Dashboard() {
   const [menuState, setMenuState] = useState<DashboardMenuState>(
-    isWindowMedium(window)
-      ? DashboardMenuState.Collapsed
-      : DashboardMenuState.Sidebar,
+    isWindowMedium(window) ?
+      DashboardMenuState.Collapsed
+    : DashboardMenuState.Sidebar,
   );
 
   useEffect(() => {

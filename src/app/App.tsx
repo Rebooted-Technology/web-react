@@ -20,11 +20,9 @@ function App() {
 
   return (
     <>
-      {serverAvailable ? (
+      {serverAvailable ?
         <Dashboard />
-      ) : (
-        <h1 className="text-3xl font-bold underline">Offline</h1>
-      )}
+      : <h1 className="text-3xl font-bold underline">Offline</h1>}
     </>
   );
 }
