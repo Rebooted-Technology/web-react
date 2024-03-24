@@ -1,25 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import {
-  Navbar,
+  Navbar as TailwindNavbar,
   Typography,
   Button,
   IconButton,
 } from "@material-tailwind/react";
+import { DashboardMenuState } from "./Dashboard";
 
-export function StickyNavbar() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const [isScreenSM, setIsScreenSM] = useState(window.innerWidth <= 960);
+interface NavbarProps {
+  menuState: DashboardMenuState;
+  updateMenuState: (state: DashboardMenuState) => void;
+}
 
-  React.useEffect(() => {
-    window.addEventListener("resize", () =>
-      setIsScreenSM(window.innerWidth <= 720)
-    );
-  }, []);
+const Navbar: React.FC<NavbarProps> = ({ menuState, updateMenuState }) => {
+  const toggleMenu = () => {
+    if (menuState === DashboardMenuState.Collapsed) {
+      updateMenuState(DashboardMenuState.Expanded);
+    } else if (menuState === DashboardMenuState.Expanded) {
+      updateMenuState(DashboardMenuState.Collapsed);
+    }
+  }
 
   return (
     <>
-      <Navbar
-        className="h-16 z-50 flex items-center justify-between rounded-none border-none bg-blue-gray-50/50"
+      <TailwindNavbar
+        className="fixed top-0 h-16 z-50 flex items-center justify-between rounded-none border-0 border-b border-blue-gray-100 bg-blue-gray-50/50 shadow-none"
         fullWidth
         placeholder={undefined}
         onPointerEnterCapture={undefined}
@@ -30,22 +35,15 @@ export function StickyNavbar() {
             className=""
             variant="text"
             size="lg"
-            disabled={!isScreenSM}
+            disabled={menuState === DashboardMenuState.Sidebar}
             ripple={false}
-            onClick={() => setIsNavOpen(!isNavOpen)}
+            onClick={toggleMenu}
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
           >
-            {isScreenSM ? (
-              isNavOpen ? (
-                "x"
-              ) : (
-                "="
-              )
-            ) : (
-              <></>
-            )}
+            {menuState === DashboardMenuState.Collapsed && <>=</>}
+            {menuState === DashboardMenuState.Expanded && <>x</>}
           </IconButton>
           <Typography
             as="a"
@@ -71,7 +69,9 @@ export function StickyNavbar() {
             <span>Button</span>
           </Button>
         </div>
-      </Navbar>
+      </TailwindNavbar>
     </>
   );
-}
+};
+
+export default Navbar;
