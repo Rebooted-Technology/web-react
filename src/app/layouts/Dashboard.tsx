@@ -11,19 +11,14 @@ export enum DashboardMenuState {
 
 function Dashboard() {
   const [menuState, setMenuState] = useState<DashboardMenuState>(
-    isWindowMedium(window) ?
-      DashboardMenuState.Collapsed
-    : DashboardMenuState.Sidebar,
+    isWindowMedium(window) ? DashboardMenuState.Collapsed : DashboardMenuState.Sidebar,
   );
 
   useEffect(() => {
     const handleResize = () => {
       if (menuState !== DashboardMenuState.Sidebar && !isWindowMedium(window)) {
         setMenuState(DashboardMenuState.Sidebar);
-      } else if (
-        menuState === DashboardMenuState.Sidebar &&
-        isWindowMedium(window)
-      ) {
+      } else if (menuState === DashboardMenuState.Sidebar && isWindowMedium(window)) {
         setMenuState(DashboardMenuState.Collapsed);
       }
     };

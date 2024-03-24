@@ -24,12 +24,9 @@ const LoadingPage = () => {
       {elapsedTime >= 1000 ?
         <div className="h-screen w-screen flex flex-col items-center justify-center px-4 pb-8 md:px-8 md:pb-12">
           <div className="flex flex-col items-center space-y-4">
-            <h2 className="text-2xl font-semibold text-blue-500">
-              Getting Things Ready!
-            </h2>
+            <h2 className="text-2xl font-semibold text-blue-500">Getting Things Ready!</h2>
             <p className="text-lg text-gray-600 text-center">
-              Render is starting a free web service for this site. Thanks for
-              your patience!
+              Render is starting a free web service for this site. Thanks for your patience!
             </p>
 
             <p className="text-center">

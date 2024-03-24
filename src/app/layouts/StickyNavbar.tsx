@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Navbar as TailwindNavbar,
-  Typography,
-  Button,
-  IconButton,
-} from "@material-tailwind/react";
+import { Navbar as TailwindNavbar, Typography, Button, IconButton } from "@material-tailwind/react";
 import { DashboardMenuState } from "./Dashboard";
 
 interface NavbarProps {

@@ -17,13 +17,10 @@ const rebootedSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addMatcher(
-      rebootedApi.endpoints.getHealthCheck.matchPending,
-      (state, { payload }) => {
-        state.apiLoading = true;
-        state.apiAvailable = false;
-      },
-    );
+    builder.addMatcher(rebootedApi.endpoints.getHealthCheck.matchPending, (state, { payload }) => {
+      state.apiLoading = true;
+      state.apiAvailable = false;
+    });
     builder.addMatcher(
       rebootedApi.endpoints.getHealthCheck.matchFulfilled,
       (state, { payload }) => {
@@ -31,13 +28,10 @@ const rebootedSlice = createSlice({
         state.apiAvailable = true;
       },
     );
-    builder.addMatcher(
-      rebootedApi.endpoints.getHealthCheck.matchRejected,
-      (state, { payload }) => {
-        state.apiLoading = false;
-        state.apiAvailable = false;
-      },
-    );
+    builder.addMatcher(rebootedApi.endpoints.getHealthCheck.matchRejected, (state, { payload }) => {
+      state.apiLoading = false;
+      state.apiAvailable = false;
+    });
   },
 });
 
