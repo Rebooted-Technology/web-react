@@ -13,7 +13,7 @@ function Dashboard() {
   const [menuState, setMenuState] = useState<DashboardMenuState>(
     isWindowMedium(window)
       ? DashboardMenuState.Collapsed
-      : DashboardMenuState.Sidebar
+      : DashboardMenuState.Sidebar,
   );
 
   useEffect(() => {

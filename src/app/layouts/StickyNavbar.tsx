@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({ menuState, updateMenuState }) => {
     } else if (menuState === DashboardMenuState.Expanded) {
       updateMenuState(DashboardMenuState.Collapsed);
     }
-  }
+  };
 
   return (
     <>

@@ -1,1 +1,1 @@
-export const isWindowMedium = (window: Window) => window.innerWidth <= 720
+export const isWindowMedium = (window: Window) => window.innerWidth <= 720;

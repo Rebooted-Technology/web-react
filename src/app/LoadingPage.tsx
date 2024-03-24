@@ -28,17 +28,33 @@ const LoadingPage = () => {
               Getting Things Ready!
             </h2>
             <p className="text-lg text-gray-600 text-center">
-              Render is starting a free web service for this site. Thanks for your
-              patience!
+              Render is starting a free web service for this site. Thanks for
+              your patience!
             </p>
 
             <p className="text-center">
               Web service deployed on render.com's{" "}
-              <a href="https://render.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 font-semibold">hobby developer plan</a>.
+              <a
+                href="https://render.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-700 font-semibold"
+              >
+                hobby developer plan
+              </a>
+              .
             </p>
             <p className="text-center">
               Static site hosted on netlify.com's{" "}
-              <a href="https://netlify.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 font-semibold">starter plan</a>.
+              <a
+                href="https://netlify.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-700 font-semibold"
+              >
+                starter plan
+              </a>
+              .
             </p>
             <div className="text-3xl font-bold text-blue-500 animate-bounce text-center">
               {formatTime(elapsedTime)}
@@ -48,7 +64,14 @@ const LoadingPage = () => {
           <div className="flex justify-between items-center mt-8 space-x-4">
             <span className="text-gray-400">
               Icons by{" "}
-              <a href="https://shape.so/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 font-semibold">shape.so</a>
+              <a
+                href="https://shape.so/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-700 font-semibold"
+              >
+                shape.so
+              </a>
             </span>
           </div>
         </div>
