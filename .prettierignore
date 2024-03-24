@@ -1,0 +1,15 @@
+# Ignore files and directories
+
+# Third-party code
+node_modules/
+
+# Generated code (example directory)
+build/
+
+# Configuration files
+.eslintrc.js
+.prettierrc
+
+# Other specific files (if needed)
+README.md
+LICENSE
