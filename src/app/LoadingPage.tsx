@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"
 
 const LoadingPage = () => {
-	const [elapsedTime, setElapsedTime] = useState(0);
+	const [elapsedTime, setElapsedTime] = useState(0)
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
-			setElapsedTime((prevTime) => prevTime + 1000);
-		}, 1000);
+			setElapsedTime((prevTime) => prevTime + 1000)
+		}, 1000)
 
-		return () => clearInterval(intervalId);
-	}, []);
+		return () => clearInterval(intervalId)
+	}, [])
 
 	const formatTime = (time: number) => {
-		const minutes = Math.floor(time / (60 * 1000)).toString();
+		const minutes = Math.floor(time / (60 * 1000)).toString()
 		const seconds = Math.floor((time % (60 * 1000)) / 1000)
 			.toString()
-			.padStart(2, "0");
-		return `${minutes}:${seconds}`;
-	};
+			.padStart(2, "0")
+		return `${minutes}:${seconds}`
+	}
 
 	return (
 		<div className="bg-gray-100">
@@ -77,7 +77,7 @@ const LoadingPage = () => {
 				</div>
 			:	<></>}
 		</div>
-	);
-};
+	)
+}
 
-export default LoadingPage;
+export default LoadingPage

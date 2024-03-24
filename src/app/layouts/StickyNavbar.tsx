@@ -1,20 +1,20 @@
-import React from "react";
-import { Navbar as TailwindNavbar, Typography, Button, IconButton } from "@material-tailwind/react";
-import { DashboardMenuState } from "./Dashboard";
+import React from "react"
+import { Navbar as TailwindNavbar, Typography, Button, IconButton } from "@material-tailwind/react"
+import { DashboardMenuState } from "./Dashboard"
 
 interface NavbarProps {
-	menuState: DashboardMenuState;
-	updateMenuState: (state: DashboardMenuState) => void;
+	menuState: DashboardMenuState
+	updateMenuState: (state: DashboardMenuState) => void
 }
 
 const Navbar: React.FC<NavbarProps> = ({ menuState, updateMenuState }) => {
 	const toggleMenu = () => {
 		if (menuState === DashboardMenuState.Collapsed) {
-			updateMenuState(DashboardMenuState.Expanded);
+			updateMenuState(DashboardMenuState.Expanded)
 		} else if (menuState === DashboardMenuState.Expanded) {
-			updateMenuState(DashboardMenuState.Collapsed);
+			updateMenuState(DashboardMenuState.Collapsed)
 		}
-	};
+	}
 
 	return (
 		<>
@@ -66,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({ menuState, updateMenuState }) => {
 				</div>
 			</TailwindNavbar>
 		</>
-	);
-};
+	)
+}
 
-export default Navbar;
+export default Navbar
