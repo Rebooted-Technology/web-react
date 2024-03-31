@@ -5,6 +5,7 @@ import LoadingPage from "./LoadingPage"
 import Dashboard from "./layouts/Dashboard"
 import { useAppSelector } from "./redux/hooks"
 import { selectServerAvailable, selectServerLoading } from "./api/rebootedSlice"
+import Main from "./layouts/Main"
 
 function App() {
 	const serverLoading = useAppSelector(selectServerLoading)
@@ -19,7 +20,7 @@ function App() {
 	return (
 		<>
 			{serverAvailable ?
-				<Dashboard />
+				<Main />
 			:	<h1 className="text-3xl font-bold underline">Offline</h1>}
 		</>
 	)
