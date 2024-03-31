@@ -2,7 +2,6 @@ import React from "react"
 
 import { useGetHealthCheckQuery } from "./api/rebootedApi"
 import LoadingPage from "./LoadingPage"
-import Dashboard from "./layouts/Dashboard"
 import { useAppSelector } from "./redux/hooks"
 import { selectServerAvailable, selectServerLoading } from "./api/rebootedSlice"
 import Main from "./layouts/Main"
