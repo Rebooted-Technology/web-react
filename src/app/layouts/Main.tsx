@@ -30,14 +30,14 @@ const GetStartedValueProposition: React.FC<GetStartedValuePropositionProps> = ({
 				<div
 					className={`flex-none grow-0 flex items-center w-6 ml-2 ${isHovered ? "opacity-80" : "opacity-30"}`}
 				>
-					<img src="icons/chevron_large_right.png" />
+					<img src="icons/chevron_large_right.png" alt="" />
 				</div>
 			</div>
 		</div>
 	)
 }
 
-const Main = ({}) => {
+const Main: React.FC = () => {
 	return (
 		<div className="flex h-screen">
 			{/* left screen side */}
