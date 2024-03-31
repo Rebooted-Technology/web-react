@@ -5,7 +5,7 @@ import App from './app/App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "@material-tailwind/react";
 import { Provider } from 'react-redux';
-import { store } from './lib/redux/store';
+import { store } from './app/redux/store';
 
 
 const root = ReactDOM.createRoot(
