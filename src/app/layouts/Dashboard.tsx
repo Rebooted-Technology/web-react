@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Navbar from "./StickyNavbar"
 import Sidebar from "./Sidebar"
 import { isWindowMedium } from "."
+import { Outlet, Route, Routes } from "react-router-dom"
 
 export enum DashboardMenuState {
 	Sidebar,
@@ -9,9 +10,9 @@ export enum DashboardMenuState {
 	Expanded,
 }
 
-function Dashboard() {
+function Layout() {
 	const [menuState, setMenuState] = useState<DashboardMenuState>(
-		isWindowMedium(window) ? DashboardMenuState.Collapsed : DashboardMenuState.Sidebar,
+		isWindowMedium(window) ? DashboardMenuState.Collapsed : DashboardMenuState.Sidebar
 	)
 
 	useEffect(() => {
@@ -35,8 +36,26 @@ function Dashboard() {
 			<Sidebar menuState={menuState} />
 			<div
 				className={`inset-0 flex-1 md:ml-64 mt-16 overflow-y-auto transition-all duration-300`}
-			></div>
+			>
+				<Outlet />
+			</div>
 		</div>
+	)
+}
+
+const Dashboard: React.FC = () => {
+	return (
+		<Routes>
+			<Route
+				path="/"
+				element={<Layout />}
+			>
+				<Route
+					index
+					element={<></>}
+				/>
+			</Route>
+		</Routes>
 	)
 }
 

@@ -5,6 +5,8 @@ import LoadingPage from "./LoadingPage"
 import { useAppSelector } from "./redux/hooks"
 import { selectServerAvailable, selectServerLoading } from "./api/rebootedSlice"
 import Main from "./layouts/Main"
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom"
+import Dashboard from "./layouts/Dashboard"
 
 function App() {
 	const serverLoading = useAppSelector(selectServerLoading)
@@ -16,12 +18,14 @@ function App() {
 		return <LoadingPage />
 	}
 
+	if (!serverAvailable) {
+		return (<h1 className="text-3xl font-bold underline">Offline</h1>)
+	}
+
 	return (
-		<>
-			{serverAvailable ?
-				<Main />
-			:	<h1 className="text-3xl font-bold underline">Offline</h1>}
-		</>
+		<BrowserRouter>
+			<Main />
+		</BrowserRouter>		
 	)
 }
 
