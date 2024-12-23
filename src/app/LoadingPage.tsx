@@ -73,6 +73,49 @@ const LoadingPage = () => {
 								shape.so
 							</a>
 						</span>
+
+						tldr: https://chatgpt.com/c/6769ef29-d3ac-8011-b55d-9350cff3f96e
+
+						<br/>
+
+						In Hungary, the formation and operation of business entities are primarily governed by Act V of 2013 on the Civil Code. The most common types of business associations include:
+
+Limited Liability Company (Korlátolt Felelősségű Társaság - Kft.): Requires a minimum registered capital of HUF 3,000,000. Members have limited liability up to their capital contributions.
+
+Private Company Limited by Shares (Zártkörűen Működő Részvénytársaság - Zrt.): Requires a minimum registered capital of HUF 5,000,000. Shares are not publicly traded.
+
+Limited Partnership (Betéti Társaság - Bt.): No minimum capital requirement. At least one member has unlimited liability, while others have limited liability.
+
+General Partnership (Közkereseti Társaság - Kkt.): No minimum capital requirement. All members have unlimited liability.
+
+The incorporation process can be expedited through simplified electronic filing, with the Court of Registry making decisions within one working day. This procedure is available for Kft., Bt., Kkt., and Zrt. 
+ACCACE
+
+Taxation for Companies in Hungary:
+
+Corporate Income Tax (CIT): Hungary has a flat corporate tax rate of 9%, one of the lowest in the European Union. 
+WIKIPEDIA
+
+Local Business Tax (LBT): Municipalities may levy a local business tax, with rates varying by locality. For example, Budapest imposes a 2% LBT on net sales revenue. 
+INCORPORATIONS
+
+Value Added Tax (VAT): The standard VAT rate is 27%, with reduced rates of 18% and 5% applicable to certain goods and services. 
+WIKIPEDIA
+
+Social Contributions: Employers are required to pay a social contribution tax of 13% on gross wages. 
+WIKIPEDIA
+
+Compensation and Income Requirements:
+
+Minimum Wage: As of 2024, the minimum wage in Hungary is subject to annual adjustments. Employers must comply with the current minimum wage regulations.
+
+Employee Income Tax: Employees are subject to a flat personal income tax rate of 15% on their earnings. 
+WIKIPEDIA
+
+Social Security Contributions: Employees contribute 18.5% of their gross wages towards social security, covering pension, health insurance, and labor market contributions. 
+WIKIPEDIA
+
+It's essential for companies operating in Hungary to stay informed about current tax rates and labor regulations, as these can change. Consulting with legal and tax professionals is advisable to ensure compliance with all statutory requirements.
 					</div>
 				</div>
 			:	<></>}
