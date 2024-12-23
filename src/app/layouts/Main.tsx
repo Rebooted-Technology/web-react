@@ -77,6 +77,13 @@ const Main: React.FC = () => {
 							click={undefined}
 						/>
 					}
+					{
+						<GetStartedValueProposition
+							forWho="Families"
+							description="Experience a new level of realization with community wishful surveillence, servitude, and exaltation of faith and hope."
+							click={undefined}
+						/>
+					}
 				</div>
 			</div>
 
